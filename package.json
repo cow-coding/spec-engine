@@ -3,6 +3,8 @@
   "displayName": "Spec Engine",
   "description": "Business Logic to PRD Generator using Local AI (Gemma/Llama)",
   "version": "0.1.0",
+  "publisher": "YOUR_PUBLISHER_ID",
+  "icon": "icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -11,6 +13,29 @@
     "AI",
     "Programming Languages"
   ],
+  "keywords": [
+    "AI",
+    "PRD",
+    "documentation",
+    "ollama",
+    "gemma",
+    "llama",
+    "business-logic",
+    "spec",
+    "product-requirements",
+    "automation",
+    "local-ai",
+    "zero-cost"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cow-coding/spec-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cow-coding/spec-engine/issues"
+  },
+  "homepage": "https://github.com/cow-coding/spec-engine#readme",
+  "license": "MIT",
   "activationEvents": [
     "onLanguage:spec",
     "onCommand:spec-engine.openPreview"
@@ -75,19 +100,20 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
     "@types/glob": "^8.1.0",
     "@types/mocha": "^10.0.6",
     "@types/node": "20.x",
+    "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "@typescript-eslint/parser": "^6.13.1",
+    "@vscode/test-electron": "^2.3.8",
     "eslint": "^8.54.0",
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
-    "typescript": "^5.3.3",
-    "@vscode/test-electron": "^2.3.8"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.2.1"
+    "@google/generative-ai": "^0.2.1",
+    "canvas": "^3.2.1"
   }
 }
