@@ -505,7 +505,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ### Inspiration
 
-- Original idea inspired by: [YouTube - AI로 기획서 자동 생성하기](https://youtu.be/vENN6-d_3AQ?si=0dUEzJWaSuiwGzad)
+- Original idea inspired by: [YouTube](https://youtu.be/vENN6-d_3AQ?si=0dUEzJWaSuiwGzad)
 
 ### Built With
 
