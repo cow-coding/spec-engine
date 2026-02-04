@@ -1,0 +1,93 @@
+{
+  "name": "spec-engine",
+  "displayName": "Spec Engine",
+  "description": "Business Logic to PRD Generator using Local AI (Gemma/Llama)",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Productivity",
+    "AI",
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:spec",
+    "onCommand:spec-engine.openPreview"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "spec",
+        "aliases": [
+          "Spec Engine",
+          "spec"
+        ],
+        "extensions": [
+          ".spec"
+        ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "spec-engine.openPreview",
+        "title": "Spec Engine: Open Preview",
+        "category": "Spec Engine"
+      }
+    ],
+    "configuration": {
+      "title": "Spec Engine",
+      "properties": {
+        "spec-engine.aiProvider": {
+          "type": "string",
+          "enum": [
+            "ollama",
+            "gemini"
+          ],
+          "default": "ollama",
+          "markdownDescription": "사용할 AI 엔진을 선택합니다. (기본값: **Ollama**)"
+        },
+        "spec-engine.localModelName": {
+          "type": "string",
+          "default": "gemma2",
+          "markdownDescription": "Ollama에서 사용할 모델명입니다. (추천: **gemma2** (빠름/1.6GB), **llama3** (고성능/4.7GB))"
+        },
+        "spec-engine.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Google Gemini API Key (Provider를 Gemini로 변경했을 때 필요)"
+        },
+        "spec-engine.modelName": {
+          "type": "string",
+          "default": "gemini-1.5-flash",
+          "description": "Gemini 모델 버전 (Gemini 사용 시)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^6.13.1",
+    "@typescript-eslint/parser": "^6.13.1",
+    "eslint": "^8.54.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-electron": "^2.3.8"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1"
+  }
+}
