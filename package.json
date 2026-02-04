@@ -3,15 +3,14 @@
   "displayName": "Spec Engine",
   "description": "Business Logic to PRD Generator using Local AI (Gemma/Llama)",
   "version": "0.1.0",
-  "publisher": "YOUR_PUBLISHER_ID",
+  "publisher": "data-polar-bear",
   "icon": "icon.png",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Productivity",
-    "AI",
-    "Programming Languages"
+    "Programming Languages",
+    "Other"
   ],
   "keywords": [
     "AI",
